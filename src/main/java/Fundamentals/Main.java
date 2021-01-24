@@ -17,9 +17,10 @@ public class Main {
         System.out.println("y1 = " + tasksExercises1.y);
         System.out.println("y2 = " + tasksExercises2.y);
         //Task 1
-     //   tasksExercises1.circlePerimeter();
-     //   TasksExercises.bodyMassIndex();
-        TasksExercises.fizzbuzz();
+    //   tasksExercises1.circlePerimeter();
+     //  TasksExercises.bodyMassIndex();
+     //   TasksExercises.fizzbuzz();
+        TasksExercises.positivNumber();
     }
 }
 

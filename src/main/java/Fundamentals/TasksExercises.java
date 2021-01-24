@@ -56,6 +56,23 @@ public class TasksExercises {
         }
     }
 
+    //   Write an application that takes a positive number from the user (type int) and prints all prime numbers greater than 1 and less than the given number.
+    public static void positivNumber() {
+        System.out.println("Introduceti numar");
+        int number = 10;
+        for (int i = 2; i < number; i++) {
+            int k = 0;
+            for (int j = 1; j <= i / 2; j++) {
+                if ((i % j) == 0) {
+                    k++;
+                    System.out.println("Numerele prime :");
+                }
+            }
+            if (k <= 2){
+                System.out.println(i + " este numar prim");
+            }
+        }
+    }
 }
 
 
