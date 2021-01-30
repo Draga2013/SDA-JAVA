@@ -21,6 +21,7 @@ public class Main {
     //  TasksExercises.bodyMassIndex();
      //   TasksExercises.fizzbuzz();
      //   TasksExercises.positivNumber();
+       TasksExercises.printAllPrimeNumbers();
     }
 }
 

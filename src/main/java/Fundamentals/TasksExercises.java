@@ -44,15 +44,16 @@ public class TasksExercises {
         int numar = scanner.nextInt();
         for (int i = 1; i <= numar; i++) {
             if ((i % 3) == 0 && (i % 7) == 0) {
-                System.out.println("fizz buzz");
-
-            } else if ((i % 7) == 0) {
-                System.out.println("buzz");
-            } else if ((i % 3) == 0) {
-                System.out.println("fizz");
-            } else {
-                System.out.println(i);
+                System.out.println("fizz buzz" + i);
+                continue;
+            }  if ((i % 7) == 0) {
+                System.out.println("buzz" + i);
+                continue;
+            }  if ((i % 3) == 0) {
+                System.out.println("fizz" +i);
+                continue;
             }
+                System.out.println(i);
         }
     }
 
@@ -68,7 +69,7 @@ public class TasksExercises {
                     System.out.println("Numerele prime :");
                 }
             }
-            if (k <= 2){
+            if (k <= 2) {
                 System.out.println(i + " este numar prim");
             }
         }
