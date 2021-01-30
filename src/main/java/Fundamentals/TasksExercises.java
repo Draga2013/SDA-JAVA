@@ -46,14 +46,16 @@ public class TasksExercises {
             if ((i % 3) == 0 && (i % 7) == 0) {
                 System.out.println("fizz buzz" + i);
                 continue;
-            }  if ((i % 7) == 0) {
+            }
+            if ((i % 7) == 0) {
                 System.out.println("buzz" + i);
                 continue;
-            }  if ((i % 3) == 0) {
-                System.out.println("fizz" +i);
+            }
+            if ((i % 3) == 0) {
+                System.out.println("fizz" + i);
                 continue;
             }
-                System.out.println(i);
+            System.out.println(i);
         }
     }
 
@@ -84,35 +86,58 @@ public class TasksExercises {
             System.out.println("The numbers is not greater than 1 ");
             return;
         }
-            for (int i = 2;i < newNumber; i++ ){
-                if (isPrime(i)){
-                    System.out.println(i);
-                }
+        for (int i = 2; i < newNumber; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
             }
+        }
         System.out.println("a");
     }
 
     private static boolean isPrime(int nr) {
-        for (int i = 2; i <= nr/2; i++){
-            if (nr % i == 0){
-               // System.out.println("rest =" + rest);
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                // System.out.println("rest =" + rest);
                 return false;
             }
         }
-       // System.out.println("End of for");
+        // System.out.println("End of for");
         return true;
     }
+
     private static boolean isPrime1(int nr) {
         boolean isPrimeNr = true;
-        for (int i = 2; i <= nr/2; i++){
-            if (nr % i == 0){
-               isPrimeNr = false;
-               break;
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                isPrimeNr = false;
+                break;
             }
         }
         return isPrimeNr;
     }
+
+    // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!" and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide any text, write "No text provided".
+    public static void longestWord() {
+        System.out.println("Type your word");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWord1 = "";
+        while (!word.equals("Enought")){
+
+            if (!word.equals("Enought") && word.length() < longestWord1.length()) {
+                longestWord1 = word;
+            }
+            word = scanner.next();
+        }
+        while (!word.equals("Enought"));
+        if (longestWord1.length() == 0) {
+            System.out.println("No text providers");
+            return;
+        }
+        System.out.println("Longest word is " + longestWord1);
+    }
 }
+
 
 
 
