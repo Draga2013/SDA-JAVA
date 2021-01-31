@@ -16,9 +16,6 @@ public class TasksExercises {
         float diameter = scanner.nextFloat();
         System.out.println("The perimeter has the folowing length: " + diameter * pi);
     }
-
-
-    //write
     public static void bodyMassIndex() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert your height in cm");
@@ -46,14 +43,16 @@ public class TasksExercises {
             if ((i % 3) == 0 && (i % 7) == 0) {
                 System.out.println("fizz buzz" + i);
                 continue;
-            }  if ((i % 7) == 0) {
+            }
+            if ((i % 7) == 0) {
                 System.out.println("buzz" + i);
                 continue;
-            }  if ((i % 3) == 0) {
-                System.out.println("fizz" +i);
+            }
+            if ((i % 3) == 0) {
+                System.out.println("fizz" + i);
                 continue;
             }
-                System.out.println(i);
+            System.out.println(i);
         }
     }
 
@@ -84,30 +83,31 @@ public class TasksExercises {
             System.out.println("The numbers is not greater than 1 ");
             return;
         }
-            for (int i = 2;i < newNumber; i++ ){
-                if (isPrime(i)){
-                    System.out.println(i);
-                }
+        for (int i = 2; i < newNumber; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
             }
+        }
         System.out.println("a");
     }
 
     private static boolean isPrime(int nr) {
-        for (int i = 2; i <= nr/2; i++){
-            if (nr % i == 0){
-               // System.out.println("rest =" + rest);
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                // System.out.println("rest =" + rest);
                 return false;
             }
         }
-       // System.out.println("End of for");
+        // System.out.println("End of for");
         return true;
     }
+
     private static boolean isPrime1(int nr) {
         boolean isPrimeNr = true;
-        for (int i = 2; i <= nr/2; i++){
-            if (nr % i == 0){
-               isPrimeNr = false;
-               break;
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                isPrimeNr = false;
+                break;
             }
         }
         return isPrimeNr;
@@ -136,7 +136,55 @@ public class TasksExercises {
         }
         return isPrimeNr;
     }
+
+    // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!" and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide any text, write "No text provided".
+    public static void longestWord() {
+        System.out.println("Type your word");
+        Scanner scanner = new Scanner(System.in);
+        String word = "";
+        String longestWord1 = "";
+        while (!word.equals("Enought")){
+
+            if (!word.equals("Enought") && word.length() < longestWord1.length()) {
+                longestWord1 = word;
+            }
+            word = scanner.next();
+        }
+        while (!word.equals("Enought"));
+        if (longestWord1.length() == 0) {
+            System.out.println("No text providers");
+            return;
+        }
+        System.out.println("Longest word is " + longestWord1);
+    }
+   // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text, in which each word is printed twice. For example, for the input: "This is my test" the application should print "This This is is my my test test
+
+    public static void stutters(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type your word: ");
+
+        String text= scanner.nextLine();
+        String[] words=text.split("");
+        System.out.println("Stutter; ");
+        for (int i = 0;i< words.length;i++){
+            System.out.println(words[i] + " " +words[i] + " ");
+        }
+        System.out.println(words[words.length-1] + " " + words[words.length-1]);
+    }
+    public static void testObjects() {
+        Dog dog1 = new Dog("Azorel");
+//        dog1.setName("Azorel");
+
+        Dog dog2 = new Dog("Azorel");
+//        dog2.setName("Azorel");
+
+        System.out.println(dog1 == dog2);
+        System.out.println(dog1.equals(dog2));
+        System.out.println(dog1.getName().equals(dog2.getName()));
+    }
 }
+
+
 
 
 
