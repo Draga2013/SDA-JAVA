@@ -16,9 +16,6 @@ public class TasksExercises {
         float diameter = scanner.nextFloat();
         System.out.println("The perimeter has the folowing length: " + diameter * pi);
     }
-
-
-    //write
     public static void bodyMassIndex() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert your height in cm");
@@ -115,6 +112,30 @@ public class TasksExercises {
         }
         return isPrimeNr;
     }
+    private static boolean isPrime3(int nr) {
+        if (nr % 2 ==0 || nr = =0 || nr ==1){
+            return false;
+        }
+        if (nr == 2){
+            return true;
+        }
+        for (int i = 3; i * i <= nr; i+=2) {
+            if (nr % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    private static boolean isPrime2(int nr) {
+        boolean isPrimeNr = true;
+        for (int i = 2; i <= nr / 2; i++) {
+            if (nr % i == 0) {
+                isPrimeNr = false;
+                break;
+            }
+        }
+        return isPrimeNr;
+    }
 
     // Write an application that will read texts (variables of the String type) until the user gives the text "Enough!" and then writes the longest of the given texts (not including the text "Enough!"). If the user does not provide any text, write "No text provided".
     public static void longestWord() {
@@ -161,7 +182,6 @@ public class TasksExercises {
         System.out.println(dog1.equals(dog2));
         System.out.println(dog1.getName().equals(dog2.getName()));
     }
-
 }
 
 
