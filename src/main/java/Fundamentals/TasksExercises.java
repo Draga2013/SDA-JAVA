@@ -161,6 +161,7 @@ public class TasksExercises {
         System.out.println(dog1.equals(dog2));
         System.out.println(dog1.getName().equals(dog2.getName()));
     }
+
 }
 
 

@@ -24,7 +24,7 @@ public class Main {
      //  TasksExercises.printAllPrimeNumbers();
      //  TasksExercises.longestWord();
      //  TasksExercises.stutters();
-       TasksExercises.testObjects();
+     //  TasksExercises.testObjects();
     }
 }
 
