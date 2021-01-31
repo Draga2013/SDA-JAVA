@@ -22,7 +22,9 @@ public class Main {
      //   TasksExercises.fizzbuzz();
      //   TasksExercises.positivNumber();
      //  TasksExercises.printAllPrimeNumbers();
-       TasksExercises.longestWord();
+     //  TasksExercises.longestWord();
+     //  TasksExercises.stutters();
+       TasksExercises.testObjects();
     }
 }
 

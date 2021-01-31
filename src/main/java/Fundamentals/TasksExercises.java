@@ -136,7 +136,33 @@ public class TasksExercises {
         }
         System.out.println("Longest word is " + longestWord1);
     }
+   // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text, in which each word is printed twice. For example, for the input: "This is my test" the application should print "This This is is my my test test
+
+    public static void stutters(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type your word: ");
+
+        String text= scanner.nextLine();
+        String[] words=text.split("");
+        System.out.println("Stutter; ");
+        for (int i = 0;i< words.length;i++){
+            System.out.println(words[i] + " " +words[i] + " ");
+        }
+        System.out.println(words[words.length-1] + " " + words[words.length-1]);
+    }
+    public static void testObjects() {
+        Dog dog1 = new Dog("Azorel");
+//        dog1.setName("Azorel");
+
+        Dog dog2 = new Dog("Azorel");
+//        dog2.setName("Azorel");
+
+        System.out.println(dog1 == dog2);
+        System.out.println(dog1.equals(dog2));
+        System.out.println(dog1.getName().equals(dog2.getName()));
+    }
 }
+
 
 
 
