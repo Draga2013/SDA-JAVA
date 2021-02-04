@@ -36,6 +36,10 @@ public class BankAccount {
         this.currency = "USD";
         this.balance = 0;
     }
+    public boolean equals2(BankAccount other){
+        return ((this.accountType == other.accountType) &&
+                (this.currency == other.currency));
+    }
 
     // addMoney ( adds money to the balance, - if the account is of type SPENDING the amount of money
 // that is added needs to be bigger than 10% of balance otherwise print a suggestive  error message)
@@ -85,7 +89,7 @@ public class BankAccount {
     }
 
     public void setAccountType(String type) {
-        this.accountType = accountType;
+        this.accountType = type;
     }
 
     /**

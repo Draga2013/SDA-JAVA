@@ -15,6 +15,68 @@ public class Client {
     private BankAccount bankAccount;
     private BankAccount[] bankAccounts;
 
+    public void addBankAccount(BankAccount account) {
+        // aici facem cautare si filtrare dupa account
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            if (this.bankAccounts[i].equals2(account)) {
+                System.out.println("this is already");
+                return;
+            }
+        }
+
+        //facem sir nou si copiem in el datele vechi
+        BankAccount[] tempAccounts = new BankAccount[bankAccounts.length + 1];
+        for (int i = 0; i < this.bankAccounts.length; i++) {
+            tempAccounts[i] = this.bankAccounts[i];
+        }
+        //adaugam elementul nou in sirul nou creat
+        tempAccounts[tempAccounts.length - 1] = account;
+        // atribuim membrului banckAccounts sirul nou creat
+        bankAccounts = tempAccounts;
+        System.out.println(" Added");
+    }
+
+    // adaugam o metoda getSavingBankAccount care returneaza un obiect BankAccount de tipul SAVING
+    // daca exista sau returneaza nul daca nu exista
+    public BankAccount getSaving() {
+//        if (bankAccounts==null){
+//            System.out.println("Saving account not found");
+//            return null;
+//        }
+        for (int i = 0; i < bankAccounts.length; i++) {
+            if (bankAccounts[i].getAccountType().equals("SAVING")) {
+                return bankAccounts[i];
+            }
+        }
+        System.out.println("Saving account not found");
+        return null;
+
+    }
+
+    public void removeAccount(String type) {
+        int count = 0; // numaram decate ori gasim contul cautat
+        for (int i = 0; i < bankAccounts.length; i++) {
+            if (bankAccounts[i].getAccountType().equals(type)) {
+                count++;
+            }
+        }
+        BankAccount tempAccounts[] = new BankAccount[bankAccounts.length-count];
+        int len = 0;
+        for (int i = 0; i < bankAccounts.length; i++) {
+            if (!bankAccounts[i].getAccountType().equals(type)) {
+                tempAccounts[len]= bankAccounts[i];
+                len++;
+            }
+        }
+        bankAccounts= tempAccounts;
+        if (count> 0){
+            System.out.println("Accounts deleted");
+        }
+        else{
+            System.out.println("could not find account");
+        }
+    }
+
     public Client(String name, String cnp, BankAccount bankAccount) {
         this.name = name;
         this.cnp = cnp;
@@ -29,6 +91,7 @@ public class Client {
 
     public Client() {
         this.bankAccount = new BankAccount();
+        this.bankAccounts = new BankAccount[0];
     }
 
     @Override
@@ -41,6 +104,7 @@ public class Client {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 

@@ -1,4 +1,4 @@
-package Fundamentals;
+package Fundamentals.Tascks;
 
 public class Dog {
     private String name;
