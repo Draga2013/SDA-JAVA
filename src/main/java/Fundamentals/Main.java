@@ -4,7 +4,7 @@ public class Main {
     public static void main (String[] arg){
   //      System.out.println("Hello world");
         //static vs non-static fields and methods
-//        TasksExercises tasksExercises1 = new TasksExercises();
+        TasksExercises tasksExercises1 = new TasksExercises();
 //        TasksExercises tasksExercises2 = new TasksExercises();
 //        System.out.println("x1 = " + tasksExercises1.x);
 //        System.out.println("x2 = " + tasksExercises2.x);
@@ -23,8 +23,9 @@ public class Main {
      //   TasksExercises.positivNumber();
      //  TasksExercises.printAllPrimeNumbers();
      //  TasksExercises.longestWord();
-     //  TasksExercises.stutters();
-     //  TasksExercises.testObjects();
+     //  tasksExercises1.stutters();
+     //  tasksExercises1.testString();
+     //  tasksExercises1.testObjects();
     }
 }
 
