@@ -16,6 +16,7 @@ public class TasksExercises {
         float diameter = scanner.nextFloat();
         System.out.println("The perimeter has the folowing length: " + diameter * pi);
     }
+
     public static void bodyMassIndex() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert your height in cm");
@@ -112,20 +113,22 @@ public class TasksExercises {
         }
         return isPrimeNr;
     }
+
     private static boolean isPrime3(int nr) {
-        if (nr % 2 ==0 || nr = =0 || nr ==1){
+        if (nr % 2 == 0 || nr == 0 || nr == 1) {
             return false;
         }
-        if (nr == 2){
+        if (nr == 2) {
             return true;
         }
-        for (int i = 3; i * i <= nr; i+=2) {
+        for (int i = 3; i * i <= nr; i += 2) {
             if (nr % i == 0) {
                 return false;
             }
         }
         return true;
     }
+
     private static boolean isPrime2(int nr) {
         boolean isPrimeNr = true;
         for (int i = 2; i <= nr / 2; i++) {
@@ -143,40 +146,49 @@ public class TasksExercises {
         Scanner scanner = new Scanner(System.in);
         String word = "";
         String longestWord1 = "";
-        while (!word.equals("Enought")){
+        while (!word.equals("Enought")) {
 
             if (!word.equals("Enought") && word.length() < longestWord1.length()) {
                 longestWord1 = word;
             }
             word = scanner.next();
         }
-        while (!word.equals("Enought"));
+        while (!word.equals("Enought")) ;
         if (longestWord1.length() == 0) {
             System.out.println("No text providers");
             return;
         }
         System.out.println("Longest word is " + longestWord1);
     }
-   // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text, in which each word is printed twice. For example, for the input: "This is my test" the application should print "This This is is my my test test
+    // Write an application that "stutters", that is, reads the user's text (type String), and prints the given text, in which each word is printed twice. For example, for the input: "This is my test" the application should print "This This is is my my test test
 
-    public static void stutters(){
+    public static void stutters() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type your word: ");
 
-        String text= scanner.nextLine();
-        String[] words=text.split("");
-        System.out.println("Stutter; ");
-        for (int i = 0;i< words.length;i++){
-            System.out.println(words[i] + " " +words[i] + " ");
+        String text = scanner.nextLine();
+        String[] words = text.split(" ");
+        System.out.print("Stutter; ");
+        for (int i = 0; i < words.length - 1; i++) {
+            System.out.print(words[i] + " " + words[i] + " ");
         }
-        System.out.println(words[words.length-1] + " " + words[words.length-1]);
+        System.out.print(words[words.length - 1] + " " + words[words.length - 1]);
     }
+
+    public void testString() {
+        String s1 = "abc", s2 = "abc", s3 = new String("abc");
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1.equals(s3));
+    }
+
+
     public static void testObjects() {
         Dog dog1 = new Dog("Azorel");
-//        dog1.setName("Azorel");
+ //       dog1.setName("Azorel");
 
         Dog dog2 = new Dog("Azorel");
-//        dog2.setName("Azorel");
+ //       dog2.setName("Azorel");
 
         System.out.println(dog1 == dog2);
         System.out.println(dog1.equals(dog2));
