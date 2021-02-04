@@ -1,4 +1,6 @@
-package Fundamentals;
+package Fundamentals.Tascks;
+
+import Fundamentals.Tascks.Dog;
 
 import java.util.Scanner;
 
