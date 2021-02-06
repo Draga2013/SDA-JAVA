@@ -1,5 +1,6 @@
 package Fundamentals.Array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayExercises {
@@ -66,6 +67,17 @@ public class ArrayExercises {
             }
         }
         System.out.println("Second max nr is " + secondMaxNr);
+    }
+    public static void removeElement() {
+        int[] myArray1 = {2, 3, 5, 7, -7, 5, 8, -5};
+        System.out.println("Original array : " + Arrays.toString(myArray1));
+
+        int removeIndex = 3;
+        for (int i = removeIndex; i < myArray1.length - 1; i++) {
+            myArray1[i] = myArray1[i + 1];
+        }
+        System.out.println("Array after removed element : " + Arrays.toString(myArray1));
+
     }
 }
 

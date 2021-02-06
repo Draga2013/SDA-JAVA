@@ -1,5 +1,7 @@
 package Fundamentals.oop;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
@@ -41,6 +43,22 @@ public class Main {
         client1.addBankAccount(account5);
         client1.removeAccount("SAVING");
         client1.removeAccount("VASILE");
+
+        // cum sa lucram cu LocalDate
+        LocalDate expriationDate = LocalDate.parse("2021-03-07");
+        LocalDate nowDate = LocalDate.now();
+        nowDate = nowDate.plusDays(30);
+        if (nowDate.equals(expriationDate))
+        {
+            // trebuie sa scad pretul
+            pret *= 0.85;
+        }
+
+        // cum sa afisezi un LocalDate (nowDate)
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
+        String dateAsString = nowDate.format(formatter);
+        System.out.println("Data este " + dateAsString);
+
 
 
 //        System.out.println("Input client's name: ");
